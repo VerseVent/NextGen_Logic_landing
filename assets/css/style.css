@@ -6,6 +6,7 @@ body {
     padding: 0;
     overflow-x: hidden;
     overflow: hidden;
+     
 }
 
 body.ts-side-panel-active .ts-side-panel {
@@ -48,7 +49,7 @@ body, html {
 }
 
 html {
-    font-size: 80%;
+    font-size: 100%;
 }
 
 h1 {
@@ -80,6 +81,13 @@ h5 {
 h6 {
     font-size: .9375rem;
 }
+/* @media (max-width:575px ){
+   .ts-content-wrapper .row{
+        margin-left: 15px;
+    } 
+} */
+  
+
 /*ripple button*/
 .ripple-button{
   position: relative;
@@ -87,7 +95,7 @@ h6 {
   padding: 12px 36px;
   margin: 10px;
   color: #fff;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   letter-spacing: 2px;
   border-radius: 5px;
   outline: none;
@@ -2115,9 +2123,10 @@ select::-ms-expand {
     border-bottom: .0625rem solid rgba(255, 255, 255, .1);
     padding-bottom: 1.25rem;
 }
+ 
 
 .ts-side-panel section {
-    margin-bottom: 6.25rem;
+    margin-bottom: 1rem;
 }
 
 .ts-side-panel .ts-close-side-panel {
@@ -2568,7 +2577,7 @@ select::-ms-expand {
     height: 3rem;
     margin-left: 10%;
     top: 50%;
-    left: 30%;
+    left: 90%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
   }
@@ -2919,6 +2928,9 @@ select::-ms-expand {
     inset 0 -15px 0 rgba(255,255,255,0.25),
     0 45px 0 rgba(0,0,0,0.15);
     overflow: hidden;
+    z-index: 0;
+    
+    
 }
 .card::before{
     content:'';
@@ -2931,9 +2943,10 @@ select::-ms-expand {
     transform: rotate(35deg);
     pointer-events: none;
     filter: blur(5px);
+    z-index: 10;
 }
 
-.card:nth-child(1){
+/* .card:nth-child(1){
     background: linear-gradient(to bottom,#ff2ae0,#645bf6)
 }
 
@@ -2943,7 +2956,7 @@ select::-ms-expand {
 
 .card:nth-child(3){
     background: linear-gradient(to bottom,#24ff72,#9a4eff)
-}
+} */
 
 .card .icon{
     position: relative;
@@ -2966,11 +2979,12 @@ select::-ms-expand {
      position: absolute;
      top: 3px;
      left: -41px;
-     height: 50px;
+     height: 55px;
      width:50px;
      background:transparent;
     border-top-right-radius:50px;
-    box-shadow: 1px -20px 0 0 rgb(0, 19, 48);
+    box-shadow: 1px -20px 0 0  rgb(0, 19, 48);
+    /* rgb(0, 19, 48) */
 }
 .card .icon::after{
     content:'';
@@ -2999,9 +3013,242 @@ select::-ms-expand {
 .card  .content h2{
     font-size: 1.4rem;
     color:#fff;
+    margin-top: 10px;
 }
 
 .card .content p {
     color: #fff;
-    line-height: 1.3rem;
+
 }
+
+.other-info{
+    margin-bottom: 25px;
+}
+/* slide cards */
+
+ 
+  
+  .slide-container-row .slide-container {
+    height: 45vh;
+    display: flex;
+    align-items: center;
+    
+    /* margin-top: 10px; */
+    /* position: relative; */
+  }
+  
+  /* .slide-container-row .prev,
+  .slide-container-row .next {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  } */
+  
+  /* .slide-container-row .prev {
+    justify-content: start;
+  }
+  
+  .slide-container-row .next {
+    justify-content: end;
+    padding-left: 31rem;
+  }
+   */
+  .slide-container-row i {
+    font-size: 2em;
+    color: white;
+    opacity: 0.5;
+    transition: all 0.2s ease-in-out;
+  }
+  .slide-container-row{
+      margin: 0;
+      display: flex;
+      justify-content: start;
+  }
+  
+  .slide-container-row  i:hover {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  
+  .slide-container-row .gallery {
+    /* position: relative; */
+    /* height: 100%; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  .slide-container-row .slide-card {
+    position: absolute;
+    width: 47%;
+    /* height: 65%; */
+    transition: all 0.3s ease-in-out;
+    /* border: 1px solid black; */
+    border-radius: 25% 0 25% 0;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    align-items:center;
+  }
+ 
+  .slide-container-row p {
+    margin: 15px 5px 5px 20px;
+    font-size: 1.1rem;
+  }
+  .slide-container-row img {
+    /* height: 100%; */
+    width: 100%;
+  }
+  
+  .slide-container-row  .position1 {
+    left: 30%;
+    z-index: 3;
+    transform: scale(1);
+    opacity: 1;
+    background-color: rgb(2, 17, 39);
+    border: 1px solid white;
+  }
+  
+  .slide-container-row .position1:hover {
+    transform: scale(1.1);
+  }
+  
+  .slide-container-row .position2 {
+    left: 60%;
+    z-index: 2;
+    transform: scale(0.8);
+    opacity: 0.6;
+  }
+  
+  .slide-container-row .position3 {
+    left: 50%;
+    z-index: 1;
+    transform: scale(0.6);
+    opacity: 0.2;
+  }
+  
+  .slide-container-row  .position4 {
+    left: 10%;
+    z-index: 1;
+    transform: scale(0.6);
+    opacity: 0.2;
+  }
+  
+  .slide-container-row .position5 {
+    left: 0;
+    z-index: 2;
+    transform: scale(0.8);
+    opacity: 0.6;
+  }
+
+  @media (max-width:425px) {
+    .slide-container-row .slide-card {
+        width: 50%;
+        
+      }
+
+      .slide-container-row .slide-container {
+        height: 35vh;
+         
+      }
+      .slide-container-row .position1 {
+       /* position: absolute; */
+       left: 25%;
+      }
+      
+      .slide-container-row .position2 {
+        left: 55%;
+         
+      }
+      
+      .slide-container-row .position3 {
+        left: 45%;
+         
+      }
+      
+      .slide-container-row  .position4 {
+        left: 5%;
+        
+      }
+      
+      .slide-container-row .position5 {
+        left: -5%;
+       
+      }
+      
+
+    }
+    @media (max-width:1200px){
+        .wrapper_form form {
+           left: 50%;
+         }
+    }
+    @media (max-width:768px){
+        .wrapper_form form {
+           left: 30%;
+         }
+    }
+    @media (max-width:380px){
+        .wrapper_form form {
+           left: 40%;
+         }
+    }
+/* 
+   @media (min-width:1440px) and (max-width: 2560px) {
+.slide-container-row p {
+    font-size: 2rem;
+    line-height: 33px;
+  }
+}
+@media (max-width: 1900px) {
+    .slide-container-row p {
+        font-size: 1.8rem;
+        
+      }
+    }
+  @media (max-width: 1730px) {
+    .slide-container-row p {
+        font-size: 1.5rem;
+        line-height: 27px;
+      }
+    }
+
+      @media (max-width: 1440px) {
+        .slide-container-row p {
+            font-size: 1.1rem;
+             line-height: 24px; 
+
+          }
+          .slide-container-row .slide-card {
+            width: 50%;
+          }
+        }
+        @media (max-width: 1024px) {
+            .slide-container-row p {
+                font-size: 1rem;
+                
+              }
+               
+            }
+       
+  @media only screen and (max-width: 768px) {
+    .slide-container-row p {
+        font-size: 0.8rem;
+        line-height: 20px;
+      }
+
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .slide-container-row p {
+        font-size: 0.8rem;
+        line-height: 20px;
+      }
+  }
+  @media only screen and (max-width: 500px) {
+    .slide-container-row p {
+        font-size: 0.8rem;
+        line-height: 15px;
+      }
+  }  */
