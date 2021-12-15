@@ -22,7 +22,7 @@
     } else {
       body.classList.remove('error');
       
-      var enable = document.querySelector('form fieldset.enable'),
+      var enable = document.querySelector('.sidebar_form fieldset.enable'),
           nextEnable = enable.nextElementSibling;
       enable.classList.remove('enable');
       enable.classList.add('disable');
@@ -38,13 +38,13 @@
   
   function keyDown(event) {
     var key = event.keyCode,
-        target = document.querySelector('fieldset.enable .button');
+        target = document.querySelector('.sidebar_form fieldset.enable .button');
     if (key == 13 || key == 9) next(target);
   }
   
   var body = document.querySelector('body'),
-      form = document.querySelector('form');
-      count = document.querySelectorAll('form fieldset').length;
+      form = document.querySelector('.sidebar_form');
+      count = document.querySelectorAll('.sidebar_form fieldset').length;
   
   window.onload = init;
 

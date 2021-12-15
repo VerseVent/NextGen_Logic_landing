@@ -51,13 +51,62 @@
 							<div class="popup__body">
 								<div class="popup__content">
 									<a href="#header" class="popup__close close-popup">X</a>
-									<div class="popup__title">Okno 1</div>
-									<div class="popup__text"><a href="#popup_2" class="popup-link">Second popup</a>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-										 ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-										  ex ea commodo consequat. Duis <a href="">aute</a> irure dolor in reprehenderit
-											 in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-											  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-												 officia deserunt mollit anim id est laborum.</div>
+									<div class="popup__title">Контактная форма</div>
+									<div class="popup__text">
+                                        <!-- <a href="#popup_2" class="popup-link"></a> -->
+                                        <form id="form-contact" class="ts-form ts-form-email ts-inputs__transparent"  data-php-path="assets/php/email.php">
+                                            <div class="row">
+                                                <div class="col-md-6 col-sm-6">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" id="form-contact-name" name="name" placeholder="Ваше имя" required>
+                                                    </div>
+                
+                                                </div>
+                
+                                                <div class="col-md-6 col-sm-6">
+                                                    <div class="form-group">
+                                                        <input type="email" class="form-control" id="form-contact-email" name="email" placeholder="Электронная почта" required>
+                                                    </div>
+                
+                                                </div>
+                
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6 col-sm-6">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" id="form-contact-nickname" name="nickname" placeholder="Instagram или Telegram" required>
+                                                    </div>
+                
+                                                </div>
+
+                                                <div class="col-md-6 col-sm-6">
+                                                    <div class="form-group">
+                                                        <input type="number" class="form-control" id="form-contact-age" name="age" placeholder="Ваш возраст" required>
+                                                    </div>
+                
+                                                </div>
+                
+                                            </div>
+                
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <textarea style="resize: none;" class="form-control" id="form-contact-message" rows="6" name="message" placeholder="Пожалуйста опишите вашу специальность" required></textarea>
+                                                    </div>
+                
+                                                </div>
+                
+                                            </div>
+                
+                                            <div class="form-group clearfix">
+                                                <button type="submit" class="btn float-right btn-outline-primary" id="form-contact-submit">Отправить</button>
+                                            </div>
+                
+                                            <!-- <div class="form-contact-status"></div> -->
+                                        </form>
+                        
+
+                                    </div>
 								</div>
 							</div>
 
@@ -365,7 +414,7 @@
                         <h3 class="contact-form-tittle">Контактная форма</h3>
 
                         <div class="wrapper_form col-md-7">
-                            <form>
+                            <form class="sidebar_form">
                                 <ul class="items"></ul>
                                 <fieldset class="username enable">
                                     <div class="icon left"><i class="user"></i></div><input type="text" name="username" placeholder="Ваше Имя"required />
@@ -408,13 +457,11 @@
 	<script src="assets/js/jquery.countdown.min.js"></script>
 	<script src="assets/js/jquery.validate.min.js"></script>
 	<script src="assets/js/jquery-validate.bootstrap-tooltip.min.js"></script>
-    <!-- <script src="assets/js/button-sub.js"></script> -->
+    
     <script src="assets/js/slideCards.js"></script>
 	<script src="assets/js/ripple-btn.js"></script>
     <script src="assets/js/form.js" defer></script>
+    <script src="assets/js/popup.js"></script>
     <script src="assets/js/custom.js"></script>
-		<script src="assets/js/popup.js">
-
-		</script>
 </body>
 </html>

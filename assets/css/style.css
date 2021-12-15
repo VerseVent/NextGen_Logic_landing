@@ -28,7 +28,7 @@ body.ts-theme-dark p {
 }
 
 body.ts-theme-dark .form-control {
-    box-shadow: 0 0 0 .125rem rgba(255, 255, 255, .2);
+    box-shadow: 0 0 0 .125rem rgba(255, 255, 255, .3);
 }
 
 body.ts-theme-dark .form-control:focus {
@@ -3144,6 +3144,22 @@ select::-ms-expand {
   body.lock{
     overflow: hidden;
   }
+/*  */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px rgb(2, 17, 39) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
   .popup{
     position: fixed;
     width: 100%;
@@ -3156,6 +3172,7 @@ select::-ms-expand {
     overflow-y: auto;
     overflow-x: hidden;
     transition: all 0.8s ease 0s;
+     
   }
   .popup.open{
     opacity: 1;
@@ -3177,12 +3194,16 @@ select::-ms-expand {
     min-height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; 
     padding:30px 10px;
+     
     transition: all 0.8s ease 0s;
   }
   .popup__content{
-    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(2, 17, 39);
     color:#000;
     max-width: 800px;
     padding:30px;
@@ -3193,7 +3214,8 @@ select::-ms-expand {
   }
   .popup__title{
     font-size: 40px;
-    margin:0px 0px 1em 0px;
+    margin:0px 0px 1rem 0;
+    color: white;
   }
   .popup__close{
     position:absolute;
